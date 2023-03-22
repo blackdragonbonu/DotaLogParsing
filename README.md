@@ -2,8 +2,11 @@
 
 This is the [task](TASK.md).
 
-Any additional information about your solution goes here.
+### Deviation from Task
+* Abilities were changed to not contain the hero name. This was done to match the description in game.
 
+
+## Description
 The Solution employs two sets of operations. One for ingesting the log file 
 and the second for retrieving the ingested data. Both the processes are 
 explained in detail below

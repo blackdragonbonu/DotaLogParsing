@@ -11,6 +11,9 @@ public class HeroKillExtractor implements FieldExtractor<FieldExtractorContext> 
         var logComponents = context.getTokenizerResponse().getLogComponents();
         for (int i = 0; i < logComponents.size(); i++) {
             var currentComponent = logComponents.get(i);
+            // hero kill is logged as <target> killed by <hero> so we assign
+            // target when we encounter hero prefix for the first time and
+            // then actor
             if (currentComponent.contains(DotaStringConstants.HERO_NAME_PREFIX)) {
                 var heroName = currentComponent.replace(DotaStringConstants.HERO_NAME_PREFIX, "");
                 if (context.getTarget() == null)
